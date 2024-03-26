@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C1330737-FFEE-47EB-BCBF-0D20F1283FA0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2D1E5E5-5150-4E2C-8CA2-6B67D6DCD19F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/RegisterPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "validateFields()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BC2D4F8-60F8-463A-8720-61621C036B5F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/Views/Authentication/RegisterPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "buttonView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2BC2D4F8-60F8-463A-8720-61621C036B5F - f0bdf59dbf75018"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.disabled(Swift.Bool) -&gt; some&gt;&gt;.0 in projekt_anairo_23.RegisterPageView.buttonView.getter : some"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/Views/Authentication/RegisterPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1380">
+               </Location>
+               <Location
+                  uuid = "2BC2D4F8-60F8-463A-8720-61621C036B5F - f0bdf59dbf75018"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.disabled(Swift.Bool) -&gt; some&gt;&gt;.0 in projekt_anairo_23.RegisterPageView.buttonView.getter : some"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/Views/Authentication/RegisterPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "1344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88B45244-95A2-4768-9685-FE26BB408EF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/RegisterPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "createUserAccount()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0E7B8D62-495B-4DFB-B0DB-89905639A175"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/HomePageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchAllPosts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A01BB39D-EF9A-4A47-A1DB-8A2A1B156461"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/UserAccountPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "fetchUserPosts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A01BB39D-EF9A-4A47-A1DB-8A2A1B156461 - cd29fc6fa99193dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for projekt_anairo_23.UserAccountPageViewModel.fetchUserPosts() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;projekt_anairo_23.Post&gt;&gt;"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/UserAccountPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1296">
+               </Location>
+               <Location
+                  uuid = "A01BB39D-EF9A-4A47-A1DB-8A2A1B156461 - 90e2ea9f3b0ad6de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for projekt_anairo_23.UserAccountPageViewModel.fetchUserPosts() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;projekt_anairo_23.Post&gt;&gt;"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/UserAccountPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1368">
+               </Location>
+               <Location
+                  uuid = "A01BB39D-EF9A-4A47-A1DB-8A2A1B156461 - 7e1e63a70dc8885f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for projekt_anairo_23.UserAccountPageViewModel.fetchUserPosts() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;projekt_anairo_23.Post&gt;&gt;"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/UserAccountPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  uuid = "A01BB39D-EF9A-4A47-A1DB-8A2A1B156461 - 27ba18cec48669d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for projekt_anairo_23.UserAccountPageViewModel.fetchUserPosts() async throws -&gt; Swift.Optional&lt;Swift.Array&lt;projekt_anairo_23.Post&gt;&gt;"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/UserAccountPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "1172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04267049-C7F2-44DF-A9C9-5CA0CF1F5DBD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/UserAccountPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchUserPosts()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "30CA02C6-EF4C-459A-9401-DC61847045D7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/Views/UserAccountPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1E022FE-F386-41EB-8D4D-B26591EF6073"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/DiscoverFriendsPageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchAllUsers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C1E022FE-F386-41EB-8D4D-B26591EF6073 - d143ae81c0fab554"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in projekt_anairo_23.DiscoverFriendsPageViewModel.fetchAllUsers() -&gt; ()"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/DiscoverFriendsPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "C1E022FE-F386-41EB-8D4D-B26591EF6073 - d143ae81c0fab554"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in projekt_anairo_23.DiscoverFriendsPageViewModel.fetchAllUsers() -&gt; ()"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/DiscoverFriendsPageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9B828602-09AE-4067-9A17-101C907BC373"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/HomePageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "setupNotification()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9B828602-09AE-4067-9A17-101C907BC373 - 9c2c9004f632e857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in projekt_anairo_23.HomePageViewModel.fetchAllPosts() -&gt; ()"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/HomePageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "9B828602-09AE-4067-9A17-101C907BC373 - a0faec497dc213a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.Notification) -&gt; () in projekt_anairo_23.HomePageViewModel.setupNotification() -&gt; ()"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/HomePageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B0F1991-1762-4091-8A0C-7E1B339780D6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/ViewModels/HomePageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "fetchAllPosts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0B0F1991-1762-4091-8A0C-7E1B339780D6 - 9c2c9004f632efda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in projekt_anairo_23.HomePageViewModel.fetchAllPosts() -&gt; ()"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/HomePageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  uuid = "0B0F1991-1762-4091-8A0C-7E1B339780D6 - 2af0213e23139cf5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (projekt_anairo_23.Post, projekt_anairo_23.Post) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in projekt_anairo_23.HomePageViewModel.fetchAllPosts() -&gt; ()"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/ViewModels/HomePageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2115CD90-8DC7-46CD-95A1-62367BD43407"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "projekt_anairo_23/Views/UserAccountPageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2115CD90-8DC7-46CD-95A1-62367BD43407 - a9ae7c900f8b54de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of projekt_anairo_23.UserAccountPageView.userImageView : some&gt;&gt;.0, &lt;&lt;opaque return type of projekt_anairo_23.UserAccountPageView.userDetailsView : some&gt;&gt;.0)&gt; in projekt_anairo_23.UserAccountPageView.profileStackView.getter : some"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/Views/UserAccountPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "2115CD90-8DC7-46CD-95A1-62367BD43407 - ff47c009dae9756b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #4 () -&gt; &lt;&lt;opaque return type of static SwiftUI.ToolbarContentBuilder.buildBlock&lt;&#x3c4;_0_0 where &#x3c4;_0_0: SwiftUI.ToolbarContent&gt;(&#x3c4;_0_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in projekt_anairo_23.UserAccountPageView.body.getter : some"
+                  moduleName = "projekt_anairo_23"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jakubiwaszek/Desktop/studia/sem1rok3/anairo/projekt_anairo_23/projekt_anairo_23/Views/UserAccountPageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
