@@ -2,7 +2,7 @@
 //  UserAccountPageView.swift
 //  projekt_anairo_23
 //
-//  Created by Bartosz Lipiński on 14/12/2023.
+//  Created by Jakub Iwaszek on 14/12/2023.
 //
 
 import SwiftUI
