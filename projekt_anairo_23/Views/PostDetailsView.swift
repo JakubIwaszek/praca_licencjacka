@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PostDetailsView: View {
     @State private var commentText: String = ""
+    @FocusState private var isCommentFieldFocused: Bool
     var post: Post
     var demoComments: [Comment] = [Comment(id: "1", contentText: "sampel commeent 1", author: User(id: "", email: "test", nickname: "testacc", photoUrl: "")), Comment(id: "2", contentText: "sampel commeent 2", author: User(id: "", email: "test", nickname: "testacc", photoUrl: "")), Comment(id: "3", contentText: "sampel commeent 3", author: User(id: "", email: "test", nickname: "testacc", photoUrl: ""))]
     
@@ -19,37 +20,34 @@ struct PostDetailsView: View {
                     userView
                         .frame(maxWidth: .infinity, alignment: .leading)
                     Divider()
-                        .background(.white)
+                        .background(.gray)
                     contentView
+                    Divider()
+                        .background(.gray)
+                    expressionsCounterView
+                    Divider()
+                        .background(.gray)
+                    expressionsButtonsView
                 }
-                .padding(16)
+                .padding([.top, .leading, .trailing], 16)
                 .frame(alignment: .leading)
                 .foregroundStyle(.white)
                 .background(Color.postBackgroundColor)
                 Divider()
-                    .background(.white)
+                    .background(.gray)
                 VStack {
                     ForEach(demoComments, id: \.id) { comment in
                         CommentView(comment: comment)
                     }
                 }
             }
-            HStack(alignment: .top) {
-                TextField("Add your comment", text: $commentText)
-                    .textFieldStyle(.automatic)
-                Spacer()
-                Button {
-                    print("send comment")
-                } label: {
-                    Text("Send")
-                }
-            }
-            .padding(16)
-            .background(Color.mainBackgroundColor)
-            .foregroundStyle(.white)
+            addCommentView
         }
         .toolbarTitleDisplayMode(.inline)
         .background(Color.postBackgroundColor)
+        .onTapGesture {
+            isCommentFieldFocused = false
+        }
     }
     
     private var userView: some View {
@@ -72,7 +70,58 @@ struct PostDetailsView: View {
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
+            Text(post.date)
+                .font(.footnote)
+                .foregroundStyle(.gray)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 16)
         }
+    }
+    
+    private var expressionsCounterView: some View {
+        HStack {
+            // TODO: Update counters
+            Text("**\(10)** likes   **\(demoComments.count)** comments")
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+    
+    private var expressionsButtonsView: some View {
+        HStack {
+            Button {
+                // TODO: Implement action
+                print("like")
+            } label: {
+                Image(systemName: "heart")
+                    .frame(width: 30, height: 30)
+            }
+            .padding(.trailing, 16)
+            Button {
+                isCommentFieldFocused = true
+            } label : {
+                Image(systemName: "bubble.right")
+                    .frame(width: 30, height: 30)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var addCommentView: some View {
+        HStack(alignment: .top) {
+            TextField("Add your comment", text: $commentText)
+                .focused($isCommentFieldFocused)
+                .textFieldStyle(.automatic)
+            Spacer()
+            Button {
+                // TODO: Implement action
+                print("send comment")
+            } label: {
+                Text("Send")
+            }
+        }
+        .padding(16)
+        .background(Color.mainBackgroundColor)
+        .foregroundStyle(.white)
     }
 }
 

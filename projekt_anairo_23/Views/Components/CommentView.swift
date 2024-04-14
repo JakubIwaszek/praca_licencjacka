@@ -19,7 +19,7 @@ struct CommentView: View {
                 commentDetailsView
                     .frame(maxWidth: .infinity, alignment: .leading)
                 Divider()
-                    .background(.white)
+                    .background(.gray)
                 contentView
             }
         }

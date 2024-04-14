@@ -27,7 +27,7 @@ struct PostView: View {
             .background(Color.postBackgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: 25))
         }
-        .frame(alignment: .leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     private var userView: some View {
@@ -36,12 +36,14 @@ struct PostView: View {
                 .resizable()
                 .frame(width: 40, height: 40)
             Text(post.user.nickname)
+                .multilineTextAlignment(.leading)
         }
     }
     
     private var contentView: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(post.contentText)
+                .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
             if let imageUrl = post.imageUrl {
                 Image("fala")
