@@ -10,5 +10,6 @@ import Foundation
 struct Comment: Identifiable, Codable {
     var id: String
     var contentText: String
+    var date: String
     var author: User
 }

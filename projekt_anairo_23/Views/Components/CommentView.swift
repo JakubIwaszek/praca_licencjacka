@@ -27,7 +27,11 @@ struct CommentView: View {
         .frame(alignment: .leading)
         .foregroundStyle(.white)
         .background(Color.postBackgroundColor)
-        .clipShape(RoundedRectangle(cornerRadius: 25))
+        .cornerRadius(20) /// make the background rounded
+        .overlay( /// apply a rounded border
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(.gray, lineWidth: 1)
+        )
     }
     
     private var commentDetailsView: some View {
@@ -45,5 +49,5 @@ struct CommentView: View {
 }
 
 #Preview {
-    CommentView(comment: Comment(id: "1", contentText: "sample comment", author: User(id: "", email: "test@test.com", nickname: "testuser", photoUrl: "")))
+    CommentView(comment: Comment(id: "1", contentText: "sample comment", date: Date().formatted(), author: User(id: "", email: "test@test.com", nickname: "testuser", photoUrl: "")))
 }

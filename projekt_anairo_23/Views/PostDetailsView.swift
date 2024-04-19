@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct PostDetailsView: View {
-    @State private var commentText: String = ""
+    @StateObject private var viewModel: PostDetailsViewModel
     @FocusState private var isCommentFieldFocused: Bool
-    var post: Post
-    var demoComments: [Comment] = [Comment(id: "1", contentText: "sampel commeent 1", author: User(id: "", email: "test", nickname: "testacc", photoUrl: "")), Comment(id: "2", contentText: "sampel commeent 2", author: User(id: "", email: "test", nickname: "testacc", photoUrl: "")), Comment(id: "3", contentText: "sampel commeent 3", author: User(id: "", email: "test", nickname: "testacc", photoUrl: ""))]
+    
+    init(post: Post) {
+        _viewModel = StateObject(wrappedValue: PostDetailsViewModel(post: post))
+    }
     
     var body: some View {
         VStack {
@@ -35,11 +37,7 @@ struct PostDetailsView: View {
                 .background(Color.postBackgroundColor)
                 Divider()
                     .background(.gray)
-                VStack {
-                    ForEach(demoComments, id: \.id) { comment in
-                        CommentView(comment: comment)
-                    }
-                }
+                commentsView
             }
             addCommentView
         }
@@ -48,6 +46,13 @@ struct PostDetailsView: View {
         .onTapGesture {
             isCommentFieldFocused = false
         }
+        .modifier(ActivityIndicatorModifier(isLoading: viewModel.isLoading))
+        .refreshable {
+            viewModel.refreshData()
+        }
+        .onAppear {
+            viewModel.refreshData()
+        }
     }
     
     private var userView: some View {
@@ -55,22 +60,22 @@ struct PostDetailsView: View {
             Image(systemName: "person.circle.fill")
                 .resizable()
                 .frame(width: 40, height: 40)
-            Text(post.user.nickname)
+            Text(viewModel.post.user.nickname)
         }
     }
     
     private var contentView: some View {
         VStack {
-            Text(post.contentText)
+            Text(viewModel.post.contentText)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            if let imageUrl = post.imageUrl {
+            if let imageUrl = viewModel.post.imageUrl {
                 Image("fala")
                     .resizable()
                     .frame(maxWidth: .infinity)
                     .aspectRatio(contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
-            Text(post.date)
+            Text(viewModel.post.date)
                 .font(.footnote)
                 .foregroundStyle(.gray)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -80,8 +85,7 @@ struct PostDetailsView: View {
     
     private var expressionsCounterView: some View {
         HStack {
-            // TODO: Update counters
-            Text("**\(10)** likes   **\(demoComments.count)** comments")
+            Text("**\(viewModel.likes.count)** likes   **\(viewModel.comments.count)** comments")
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
@@ -89,11 +93,11 @@ struct PostDetailsView: View {
     private var expressionsButtonsView: some View {
         HStack {
             Button {
-                // TODO: Implement action
-                print("like")
+                viewModel.addLike()
             } label: {
-                Image(systemName: "heart")
+                Image(systemName: viewModel.hasLiked() ? "heart.fill" : "heart")
                     .frame(width: 30, height: 30)
+                    .foregroundStyle(viewModel.hasLiked() ? Color.red : Color.white)
             }
             .padding(.trailing, 16)
             Button {
@@ -106,15 +110,28 @@ struct PostDetailsView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
+    @ViewBuilder
+    private var commentsView: some View {
+        if !viewModel.comments.isEmpty {
+            VStack {
+                ForEach(viewModel.comments, id: \.id) { comment in
+                    CommentView(comment: comment)
+                        .padding(.horizontal, 16)
+                }
+            }
+        } else if viewModel.isLoading {
+            ProgressView()
+        }
+    }
+    
     private var addCommentView: some View {
         HStack(alignment: .top) {
-            TextField("Add your comment", text: $commentText)
+            TextField("Add your comment", text: $viewModel.commentText)
                 .focused($isCommentFieldFocused)
                 .textFieldStyle(.automatic)
             Spacer()
             Button {
-                // TODO: Implement action
-                print("send comment")
+                viewModel.addComment()
             } label: {
                 Text("Send")
             }
