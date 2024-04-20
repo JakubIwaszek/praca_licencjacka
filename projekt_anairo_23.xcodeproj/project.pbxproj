@@ -12,6 +12,10 @@
 		8A1C47672B5B1549003B754E /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C47662B5B1549003B754E /* HomePageViewModel.swift */; };
 		8A1C47692B5B1681003B754E /* CollectionPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C47682B5B1681003B754E /* CollectionPath.swift */; };
 		8A1C476C2B5B1BC8003B754E /* UserAccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C476B2B5B1BC8003B754E /* UserAccountPageViewModel.swift */; };
+		8A6E61502BCA9CD10095223B /* PostDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E614F2BCA9CD10095223B /* PostDetailsView.swift */; };
+		8A6E61522BCAA6310095223B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61512BCAA6310095223B /* CommentView.swift */; };
+		8A6E61542BCAA7010095223B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61532BCAA7010095223B /* Comment.swift */; };
+		8A6E61562BD2ACA90095223B /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61552BD2ACA90095223B /* PostDetailsViewModel.swift */; };
 		8A949BDF2B129464005DCFD4 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A949BDE2B129464005DCFD4 /* LoginPageView.swift */; };
 		8AD988992AF570190092C290 /* projekt_anairo_23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD988982AF570190092C290 /* projekt_anairo_23App.swift */; };
 		8AD9889B2AF570190092C290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9889A2AF570190092C290 /* ContentView.swift */; };
@@ -72,6 +76,10 @@
 		8A1C47662B5B1549003B754E /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		8A1C47682B5B1681003B754E /* CollectionPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPath.swift; sourceTree = "<group>"; };
 		8A1C476B2B5B1BC8003B754E /* UserAccountPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountPageViewModel.swift; sourceTree = "<group>"; };
+		8A6E614F2BCA9CD10095223B /* PostDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsView.swift; sourceTree = "<group>"; };
+		8A6E61512BCAA6310095223B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		8A6E61532BCAA7010095223B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		8A6E61552BD2ACA90095223B /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
 		8A949BDE2B129464005DCFD4 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		8AD988952AF570190092C290 /* projekt_anairo_23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projekt_anairo_23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD988982AF570190092C290 /* projekt_anairo_23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projekt_anairo_23App.swift; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD988E52B11065D0092C290 /* PostView.swift */,
+				8A6E61512BCAA6310095223B /* CommentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -200,6 +209,7 @@
 				8AD988A92AF5710C0092C290 /* HomePageView.swift */,
 				8ADFA6DC2B2BA71000864550 /* UserAccountPageView.swift */,
 				8AF863962B5C08D800B46F08 /* DiscoverFriendsPageView.swift */,
+				8A6E614F2BCA9CD10095223B /* PostDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +220,7 @@
 				8AD988E82B1109660092C290 /* Post.swift */,
 				8ADFA6D42B23D0EA00864550 /* AlertMessage.swift */,
 				8ADFA6DE2B2BA76A00864550 /* User.swift */,
+				8A6E61532BCAA7010095223B /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +256,7 @@
 				8A1C47662B5B1549003B754E /* HomePageViewModel.swift */,
 				8A1C476B2B5B1BC8003B754E /* UserAccountPageViewModel.swift */,
 				8AF863982B5C090500B46F08 /* DiscoverFriendsPageViewModel.swift */,
+				8A6E61552BD2ACA90095223B /* PostDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -357,8 +369,10 @@
 				8A1C47632B5AF406003B754E /* AddNewPostViewModel.swift in Sources */,
 				8AD9889B2AF570190092C290 /* ContentView.swift in Sources */,
 				8ADFA6D52B23D0EA00864550 /* AlertMessage.swift in Sources */,
+				8A6E61562BD2ACA90095223B /* PostDetailsViewModel.swift in Sources */,
 				8AD9889D2AF570190092C290 /* Item.swift in Sources */,
 				8AD988AA2AF5710C0092C290 /* HomePageView.swift in Sources */,
+				8A6E61522BCAA6310095223B /* CommentView.swift in Sources */,
 				8ADFA6C92B237AF300864550 /* RootManager.swift in Sources */,
 				8ADFA6D72B23D13400864550 /* LoginPageViewModel.swift in Sources */,
 				8ADFA6D32B23B5F400864550 /* RegisterPageViewModel.swift in Sources */,
@@ -367,6 +381,7 @@
 				8A1C476C2B5B1BC8003B754E /* UserAccountPageViewModel.swift in Sources */,
 				8ADFA6DD2B2BA71000864550 /* UserAccountPageView.swift in Sources */,
 				8AD988992AF570190092C290 /* projekt_anairo_23App.swift in Sources */,
+				8A6E61502BCA9CD10095223B /* PostDetailsView.swift in Sources */,
 				8A1C47672B5B1549003B754E /* HomePageViewModel.swift in Sources */,
 				8ADFA6DB2B24CF7100864550 /* ActivityIndicatorModifier.swift in Sources */,
 				8AF863972B5C08D800B46F08 /* DiscoverFriendsPageView.swift in Sources */,
@@ -375,6 +390,7 @@
 				8ADFA6CF2B23B41900864550 /* AppDelegate.swift in Sources */,
 				8ADFA6C62B23752E00864550 /* RegisterPageView.swift in Sources */,
 				8AD988EB2B110FBB0092C290 /* Utilities.swift in Sources */,
+				8A6E61542BCAA7010095223B /* Comment.swift in Sources */,
 				8AD988E32B1102D00092C290 /* MainTabView.swift in Sources */,
 				8A949BDF2B129464005DCFD4 /* LoginPageView.swift in Sources */,
 				8A1C47652B5AFC0B003B754E /* UserManager.swift in Sources */,
