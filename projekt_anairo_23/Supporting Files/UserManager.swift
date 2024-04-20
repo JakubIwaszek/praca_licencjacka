@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LocalAuthentication
 
 class UserManager {
     static let shared = UserManager()
@@ -15,6 +16,14 @@ class UserManager {
     func setupUser(with user: User) {
         currentUser = user
         fetchFollowingList()
+    }
+    
+    func saveUserCredentials(login: String?, password: String?) {
+        guard let login = login, let password = password else {
+            return
+        }
+        KeychainManager.shared.save(key: "login", value: login)
+        KeychainManager.shared.save(key: "password", value: password)
     }
     
     func fetchFollowingList() {
@@ -31,5 +40,30 @@ class UserManager {
     func removeUser() {
         currentUser = nil
         following = []
+    }
+    
+    func authenticateWithBiometrics(success: @escaping (Bool) -> Void) {
+        let context = LAContext()
+        var error: NSError?
+        
+        // check whether biometric authentication is possible
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // it's possible, so go ahead and use it
+            let reason = "Auto login"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { authSuccess, authenticationError in
+                // authentication has now completed
+                if authSuccess {
+                    // authenticated successfully
+                    success(true)
+                } else {
+                    // there was a problem
+                    success(false)
+                }
+            }
+        } else {
+            // no biometrics
+            success(false)
+        }
     }
 }

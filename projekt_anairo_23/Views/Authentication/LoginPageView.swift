@@ -33,6 +33,16 @@ struct LoginPageView: View {
                 }
             }
             .modifier(ActivityIndicatorModifier(isLoading: viewModel.isLoading))
+            .onChange(of: viewModel.shouldMoveRoot) { _, shouldMove in
+                if shouldMove {
+                    withAnimation(.spring()) {
+                        appRootManager.currentRoot = .home
+                    }
+                }
+            }
+            .onAppear {
+                viewModel.checkForSavedData()
+            }
         }
     }
     
@@ -71,9 +81,7 @@ struct LoginPageView: View {
             Button {
                 viewModel.signIn { success in
                     if success {
-                        withAnimation(.spring()) {
-                            appRootManager.currentRoot = .home
-                        }
+                        viewModel.setCurrentRootView()
                     }
                 }
             } label: {

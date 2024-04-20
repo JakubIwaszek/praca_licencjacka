@@ -13,6 +13,7 @@ class LoginPageViewModel: ObservableObject {
     @Published var alert = AlertMessage(message: "")
     @Published var login = ""
     @Published var password = ""
+    @Published var shouldMoveRoot = false
     
     func validateFields() -> Bool {
         return !login.isEmpty && !password.isEmpty
@@ -27,6 +28,7 @@ class LoginPageViewModel: ObservableObject {
                     switch result {
                     case .success(let user):
                         UserManager.shared.setupUser(with: user)
+                        UserManager.shared.saveUserCredentials(login: self?.login, password: self?.password)
                         success(true)
                     case .failure(let error):
                         self?.alert.setup(isPresented: true, message: error.localizedDescription)
@@ -41,6 +43,25 @@ class LoginPageViewModel: ObservableObject {
                 }
                 self?.alert.setup(isPresented: true, message: error.localizedDescription)
                 success(false)
+            }
+        }
+    }
+    
+    func setCurrentRootView() {
+        shouldMoveRoot = true
+    }
+    
+    func checkForSavedData() {
+        guard let savedLogin = KeychainManager.shared.read(key: "login"), let savedPassword = KeychainManager.shared.read(key: "password") else {
+            return
+        }
+        UserManager.shared.authenticateWithBiometrics { [weak self] success in
+            if success {
+                self?.login = savedLogin
+                self?.password = savedPassword
+                self?.signIn { [weak self] signedIn in
+                    self?.setCurrentRootView()
+                }
             }
         }
     }
