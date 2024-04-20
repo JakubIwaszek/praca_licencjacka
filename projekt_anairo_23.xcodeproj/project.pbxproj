@@ -16,6 +16,8 @@
 		8A6E61522BCAA6310095223B /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61512BCAA6310095223B /* CommentView.swift */; };
 		8A6E61542BCAA7010095223B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61532BCAA7010095223B /* Comment.swift */; };
 		8A6E61562BD2ACA90095223B /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61552BD2ACA90095223B /* PostDetailsViewModel.swift */; };
+		8A6E61582BD3A1720095223B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61572BD3A1720095223B /* KeychainManager.swift */; };
+		8A6E615B2BD3A3B70095223B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 8A6E615A2BD3A3B70095223B /* KeychainAccess */; };
 		8A949BDF2B129464005DCFD4 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A949BDE2B129464005DCFD4 /* LoginPageView.swift */; };
 		8AD988992AF570190092C290 /* projekt_anairo_23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD988982AF570190092C290 /* projekt_anairo_23App.swift */; };
 		8AD9889B2AF570190092C290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9889A2AF570190092C290 /* ContentView.swift */; };
@@ -80,6 +82,7 @@
 		8A6E61512BCAA6310095223B /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		8A6E61532BCAA7010095223B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8A6E61552BD2ACA90095223B /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
+		8A6E61572BD3A1720095223B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		8A949BDE2B129464005DCFD4 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		8AD988952AF570190092C290 /* projekt_anairo_23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projekt_anairo_23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD988982AF570190092C290 /* projekt_anairo_23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projekt_anairo_23App.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 				8AD988CF2B10F72F0092C290 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				8AD988C12B10F72F0092C290 /* FirebaseDatabaseSwift in Frameworks */,
 				8AD988CB2B10F72F0092C290 /* FirebaseFunctions in Frameworks */,
+				8A6E615B2BD3A3B70095223B /* KeychainAccess in Frameworks */,
 				8AD988E12B10F72F0092C290 /* FirebaseStorageCombine-Community in Frameworks */,
 				8AD988DB2B10F72F0092C290 /* FirebaseRemoteConfig in Frameworks */,
 				8AD988B72B10F72F0092C290 /* FirebaseAppDistribution-Beta in Frameworks */,
@@ -234,6 +238,7 @@
 				8ADFA6DA2B24CF7100864550 /* ActivityIndicatorModifier.swift */,
 				8A1C47642B5AFC0B003B754E /* UserManager.swift */,
 				8A1C47682B5B1681003B754E /* CollectionPath.swift */,
+				8A6E61572BD3A1720095223B /* KeychainManager.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				8AD988DC2B10F72F0092C290 /* FirebaseRemoteConfigSwift */,
 				8AD988DE2B10F72F0092C290 /* FirebaseStorage */,
 				8AD988E02B10F72F0092C290 /* FirebaseStorageCombine-Community */,
+				8A6E615A2BD3A3B70095223B /* KeychainAccess */,
 			);
 			productName = projekt_anairo_23;
 			productReference = 8AD988952AF570190092C290 /* projekt_anairo_23.app */;
@@ -336,6 +342,7 @@
 			mainGroup = 8AD9888C2AF570190092C290;
 			packageReferences = (
 				8AD988AB2B10F72F0092C290 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8A6E61592BD3A3B70095223B /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 8AD988962AF570190092C290 /* Products */;
 			projectDirPath = "";
@@ -387,6 +394,7 @@
 				8AF863972B5C08D800B46F08 /* DiscoverFriendsPageView.swift in Sources */,
 				8AD988E62B11065D0092C290 /* PostView.swift in Sources */,
 				8AD988E92B1109660092C290 /* Post.swift in Sources */,
+				8A6E61582BD3A1720095223B /* KeychainManager.swift in Sources */,
 				8ADFA6CF2B23B41900864550 /* AppDelegate.swift in Sources */,
 				8ADFA6C62B23752E00864550 /* RegisterPageView.swift in Sources */,
 				8AD988EB2B110FBB0092C290 /* Utilities.swift in Sources */,
@@ -528,6 +536,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to use FaceID for Auto Login.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -566,6 +575,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to use FaceID for Auto Login.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -615,6 +625,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8A6E61592BD3A3B70095223B /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		8AD988AB2B10F72F0092C290 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -626,6 +644,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8A6E615A2BD3A3B70095223B /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8A6E61592BD3A3B70095223B /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		8AD988AC2B10F72F0092C290 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8AD988AB2B10F72F0092C290 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
