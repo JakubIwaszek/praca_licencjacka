@@ -11,5 +11,5 @@ struct User: Codable, Identifiable {
     var id: String
     var email: String
     var nickname: String
-    var photoUrl: String?
+    var photoData: Data?
 }

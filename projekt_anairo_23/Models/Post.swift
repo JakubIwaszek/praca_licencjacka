@@ -12,5 +12,5 @@ struct Post: Identifiable, Codable {
     var contentText: String
     var date: String
     var user: User
-    var imageUrl: String?
+    var imageData: Data?
 }

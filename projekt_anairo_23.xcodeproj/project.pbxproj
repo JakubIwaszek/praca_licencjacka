@@ -18,6 +18,7 @@
 		8A6E61562BD2ACA90095223B /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61552BD2ACA90095223B /* PostDetailsViewModel.swift */; };
 		8A6E61582BD3A1720095223B /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E61572BD3A1720095223B /* KeychainManager.swift */; };
 		8A6E615B2BD3A3B70095223B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 8A6E615A2BD3A3B70095223B /* KeychainAccess */; };
+		8A6E61602BD3C1F40095223B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E615F2BD3C1F40095223B /* ImageView.swift */; };
 		8A949BDF2B129464005DCFD4 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A949BDE2B129464005DCFD4 /* LoginPageView.swift */; };
 		8AD988992AF570190092C290 /* projekt_anairo_23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD988982AF570190092C290 /* projekt_anairo_23App.swift */; };
 		8AD9889B2AF570190092C290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9889A2AF570190092C290 /* ContentView.swift */; };
@@ -83,6 +84,7 @@
 		8A6E61532BCAA7010095223B /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8A6E61552BD2ACA90095223B /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
 		8A6E61572BD3A1720095223B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		8A6E615F2BD3C1F40095223B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		8A949BDE2B129464005DCFD4 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
 		8AD988952AF570190092C290 /* projekt_anairo_23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projekt_anairo_23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD988982AF570190092C290 /* projekt_anairo_23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projekt_anairo_23App.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8A6E615C2BD3BDFC0095223B /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				8A6E615F2BD3C1F40095223B /* ImageView.swift */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
 		8AD9888C2AF570190092C290 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +216,7 @@
 		8AD988E42B11064F0092C290 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A6E615C2BD3BDFC0095223B /* Supporting Views */,
 				8A1C476A2B5B1B7D003B754E /* Components */,
 				8ADFA6D02B23B5D700864550 /* Authentication */,
 				8AD988E22B1102D00092C290 /* MainTabView.swift */,
@@ -386,6 +397,7 @@
 				8ADFA6CB2B237BDA00864550 /* AddNewPostPageView.swift in Sources */,
 				8ADFA6DF2B2BA76B00864550 /* User.swift in Sources */,
 				8A1C476C2B5B1BC8003B754E /* UserAccountPageViewModel.swift in Sources */,
+				8A6E61602BD3C1F40095223B /* ImageView.swift in Sources */,
 				8ADFA6DD2B2BA71000864550 /* UserAccountPageView.swift in Sources */,
 				8AD988992AF570190092C290 /* projekt_anairo_23App.swift in Sources */,
 				8A6E61502BCA9CD10095223B /* PostDetailsView.swift in Sources */,

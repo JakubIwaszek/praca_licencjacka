@@ -11,8 +11,8 @@ struct PostDetailsView: View {
     @StateObject private var viewModel: PostDetailsViewModel
     @FocusState private var isCommentFieldFocused: Bool
     
-    init(post: Post) {
-        _viewModel = StateObject(wrappedValue: PostDetailsViewModel(post: post))
+    init(post: Post, author: User) {
+        _viewModel = StateObject(wrappedValue: PostDetailsViewModel(post: post, author: author))
     }
     
     var body: some View {
@@ -57,9 +57,16 @@ struct PostDetailsView: View {
     
     private var userView: some View {
         HStack(alignment: .top) {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 40, height: 40)
+            if let imageData = viewModel.author.photoData, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+            } else {
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+            }
             Text(viewModel.post.user.nickname)
         }
     }
@@ -68,8 +75,8 @@ struct PostDetailsView: View {
         VStack {
             Text(viewModel.post.contentText)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            if let imageUrl = viewModel.post.imageUrl {
-                Image("fala")
+            if let imageData = viewModel.post.imageData, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
                     .resizable()
                     .frame(maxWidth: .infinity)
                     .aspectRatio(contentMode: .fit)
@@ -115,7 +122,7 @@ struct PostDetailsView: View {
         if !viewModel.comments.isEmpty {
             VStack {
                 ForEach(viewModel.comments, id: \.id) { comment in
-                    CommentView(comment: comment)
+                    CommentView(comment: comment, author: comment.author)
                         .padding(.horizontal, 16)
                 }
             }
@@ -142,6 +149,6 @@ struct PostDetailsView: View {
     }
 }
 
-#Preview {
-    PostDetailsView(post: Post(id: "1", contentText: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum", date: "2024-11-21", user: User(id: "1", email: "test@test.com", nickname: "test", photoUrl: "")))
-}
+//#Preview {
+//    PostDetailsView(post: Post(id: "1", contentText: "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum", date: "2024-11-21", user: User(id: "1", email: "test@test.com", nickname: "test", photoUrl: "")))
+//}

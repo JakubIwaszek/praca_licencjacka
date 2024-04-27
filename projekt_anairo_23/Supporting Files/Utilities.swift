@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 extension Color {
     public static var lightGray: Color = {
@@ -32,4 +33,24 @@ extension DateFormatter {
         dateFormatter.dateFormat = "dd/MM/yyyy, HH:mm"
         return dateFormatter
     }()
+}
+
+extension PhotosPickerItem {
+    func loadTransferable(completion: @escaping (Data?) -> Void) -> Progress {
+        return self.loadTransferable(type: Data.self) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let imageData?):
+                    // Handle the success case with the image.
+                    completion(imageData)
+                case .success(nil):
+                    // Handle the success case with an empty value.
+                    completion(nil)
+                case .failure(let error):
+                    // Handle the failure case with the provided error.
+                    completion(nil)
+                }
+            }
+        }
+    }
 }

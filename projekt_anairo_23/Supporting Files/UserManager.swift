@@ -7,6 +7,7 @@
 
 import Foundation
 import LocalAuthentication
+import SwiftUI
 
 class UserManager {
     static let shared = UserManager()
@@ -16,6 +17,7 @@ class UserManager {
     func setupUser(with user: User) {
         currentUser = user
         fetchFollowingList()
+        fetchUserImage { _ in }
     }
     
     func saveUserCredentials(login: String?, password: String?) {
@@ -33,6 +35,22 @@ class UserManager {
         AppDelegate.db.collection(CollectionPath.userFollowing.rawValue).document(currentUser.id).getDocument { [weak self] snapshot, error in
             if let ids = snapshot?.data()?["ids"] as? [String] {
                 self?.following = ids
+            }
+        }
+    }
+    
+    func fetchUserImage(completion: @escaping (Data?) -> Void) {
+        guard let currentUser = UserManager.shared.currentUser else {
+            completion(nil)
+            return
+        }
+        let imageRef = AppDelegate.storage.reference().child("images/user-\(currentUser.id)")
+        imageRef.getData(maxSize: 10 * 1024 * 1024) { [weak self] data, _ in
+            if let imageData = data {
+                self?.currentUser?.photoData = imageData
+                completion(data)
+            } else {
+                completion(nil)
             }
         }
     }

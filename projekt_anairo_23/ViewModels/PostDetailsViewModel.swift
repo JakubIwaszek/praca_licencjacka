@@ -14,9 +14,11 @@ class PostDetailsViewModel: ObservableObject {
     @Published var isLoading = false
     var hasFetched = false
     var post: Post
+    var author: User
     
-    init(post: Post) {
+    init(post: Post, author: User) {
         self.post = post
+        self.author = author
     }
     
     func refreshData() {

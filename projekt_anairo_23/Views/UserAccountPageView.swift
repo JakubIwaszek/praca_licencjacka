@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct UserAccountPageView: View {
     @EnvironmentObject private var appRootManager: RootManager
@@ -26,9 +27,11 @@ struct UserAccountPageView: View {
             }
             .task {
                 await viewModel.loadUserPosts()
+                await viewModel.refreshUserImage()
             }
             .refreshable {
                 await viewModel.loadUserPosts()
+                await viewModel.refreshUserImage()
             }
             .background(Color.mainBackgroundColor)
             .modifier(ActivityIndicatorModifier(isLoading: viewModel.isLoading))
@@ -53,10 +56,19 @@ struct UserAccountPageView: View {
     }
     
     private var userImageView: some View {
-        Image(systemName: "person.circle.fill")
-            .resizable()
+        ImageView(imageState: viewModel.profileImageState)
             .frame(width: 140, height: 140)
             .clipShape(Circle())
+            .overlay(alignment: .topLeading) {
+                PhotosPicker(selection: $viewModel.imageSelection, matching: .images, preferredItemEncoding: .automatic) {
+                    Image(systemName: "arrow.triangle.2.circlepath.camera")
+                        .resizable()
+                        .frame(width: 30, height: 25)
+                        .padding(10)
+                        .background(Color.mainBackgroundColor)
+                        .clipShape(Circle())
+                }
+            }
     }
     
     private var userDetailsView: some View {
@@ -75,7 +87,7 @@ struct UserAccountPageView: View {
     private var postsView: some View {
         VStack {
             ForEach(viewModel.userPosts, id: \.id) { post in
-                PostView(post: post)
+                PostView(post: post, author: UserManager.shared.currentUser ?? post.user)
                     .padding(.bottom, 20)
             }
         }

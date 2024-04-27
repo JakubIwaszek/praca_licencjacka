@@ -20,7 +20,7 @@ struct HomePageView: View {
                 VStack {
                     if !viewModel.posts.isEmpty {
                         ForEach(viewModel.posts, id: \.id) { post in
-                            PostView(post: post)
+                            PostView(post: post, author: post.user)
                                 .padding(.bottom, 20)
                         }
                     } else {
