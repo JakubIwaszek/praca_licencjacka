@@ -20,6 +20,29 @@ class UserManager {
         fetchUserImage { _ in }
     }
     
+    func saveUserSession(currentUser: User) {
+        let encoder = JSONEncoder()
+        if let userData = try? encoder.encode(currentUser) {
+            UserDefaults.standard.set(userData, forKey: "user")
+        }
+    }
+    
+    func getUserSession() -> User? {
+        if let userData = UserDefaults.standard.object(forKey: "user") as? Data {
+            let decoder = JSONDecoder()
+            guard let user = try? decoder.decode(User.self, from: userData) else {
+                return nil
+            }
+            return user
+        } else {
+            return nil
+        }
+    }
+    
+    func removeUserSession() {
+        UserDefaults.standard.removeObject(forKey: "user")
+    }
+    
     func saveUserCredentials(login: String?, password: String?) {
         guard let login = login, let password = password else {
             return
@@ -56,6 +79,7 @@ class UserManager {
     }
     
     func removeUser() {
+        removeUserSession()
         currentUser = nil
         following = []
     }

@@ -88,10 +88,9 @@ class UserAccountPageViewModel: ObservableObject {
             return
         }
         let newImageRef = AppDelegate.storage.reference().child("images/user-\(currentUser.id)")
-        newImageRef.putData(imageData, metadata: nil) { [weak self] result in
+        newImageRef.putData(imageData, metadata: nil) {result in
             switch result {
             case .success(_):
-                print("success")
                 completion(true)
             case .failure(let error):
                 print(error.localizedDescription)
