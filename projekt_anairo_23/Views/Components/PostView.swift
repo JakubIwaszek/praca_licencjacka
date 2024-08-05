@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PostView: View {
     var post: Post
-    var author: User
+    @State var author: User
+    @State var isAuthorPhotoLoading = true
     
     var body: some View {
         NavigationLink {
@@ -38,6 +39,16 @@ struct PostView: View {
                     .resizable()
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())
+            } else if isAuthorPhotoLoading {
+                ProgressView()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                    .onAppear {
+                        UserManager.shared.fetchUserImage(for: author) { imageData in
+                            author.photoData = imageData
+                            isAuthorPhotoLoading = false
+                        }
+                    }
             } else {
                 Image(systemName: "person.circle.fill")
                     .resizable()

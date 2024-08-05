@@ -17,7 +17,9 @@ class UserManager {
     func setupUser(with user: User) {
         currentUser = user
         fetchFollowingList()
-        fetchUserImage { _ in }
+        fetchUserImage(for: user) { [weak self] data in
+            self?.currentUser?.photoData = data
+        }
     }
     
     func saveUserSession(currentUser: User) {
@@ -62,15 +64,10 @@ class UserManager {
         }
     }
     
-    func fetchUserImage(completion: @escaping (Data?) -> Void) {
-        guard let currentUser = UserManager.shared.currentUser else {
-            completion(nil)
-            return
-        }
-        let imageRef = AppDelegate.storage.reference().child("images/user-\(currentUser.id)")
-        imageRef.getData(maxSize: 10 * 1024 * 1024) { [weak self] data, _ in
+    func fetchUserImage(for user: User, completion: @escaping (Data?) -> Void) {
+        let imageRef = AppDelegate.storage.reference().child("images/user-\(user.id)")
+        imageRef.getData(maxSize: 10 * 1024 * 1024) { data, _ in
             if let imageData = data {
-                self?.currentUser?.photoData = imageData
                 completion(data)
             } else {
                 completion(nil)

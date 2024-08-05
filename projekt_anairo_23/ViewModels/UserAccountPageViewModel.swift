@@ -73,8 +73,12 @@ class UserAccountPageViewModel: ObservableObject {
     
     func refreshUserImage() async {
         profileImageState = .loading(Progress())
-        UserManager.shared.fetchUserImage { [weak self] data in
+        guard let currentUser = UserManager.shared.currentUser else {
+            return
+        }
+        UserManager.shared.fetchUserImage(for: currentUser) { [weak self] data in
             if let imageData = data, let uiImage = UIImage(data: imageData) {
+                UserManager.shared.currentUser?.photoData = imageData
                 self?.profileImageState = .success(Image(uiImage: uiImage))
             } else {
                 self?.profileImageState = .empty
