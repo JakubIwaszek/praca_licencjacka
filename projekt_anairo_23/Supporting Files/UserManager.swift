@@ -7,6 +7,7 @@
 
 import Foundation
 import LocalAuthentication
+import SwiftUI
 
 class UserManager {
     static let shared = UserManager()
@@ -16,6 +17,32 @@ class UserManager {
     func setupUser(with user: User) {
         currentUser = user
         fetchFollowingList()
+        fetchUserImage(for: user) { [weak self] data in
+            self?.currentUser?.photoData = data
+        }
+    }
+    
+    func saveUserSession(currentUser: User) {
+        let encoder = JSONEncoder()
+        if let userData = try? encoder.encode(currentUser) {
+            UserDefaults.standard.set(userData, forKey: "user")
+        }
+    }
+    
+    func getUserSession() -> User? {
+        if let userData = UserDefaults.standard.object(forKey: "user") as? Data {
+            let decoder = JSONDecoder()
+            guard let user = try? decoder.decode(User.self, from: userData) else {
+                return nil
+            }
+            return user
+        } else {
+            return nil
+        }
+    }
+    
+    func removeUserSession() {
+        UserDefaults.standard.removeObject(forKey: "user")
     }
     
     func saveUserCredentials(login: String?, password: String?) {
@@ -37,7 +64,19 @@ class UserManager {
         }
     }
     
+    func fetchUserImage(for user: User, completion: @escaping (Data?) -> Void) {
+        let imageRef = AppDelegate.storage.reference().child("images/user-\(user.id)")
+        imageRef.getData(maxSize: 10 * 1024 * 1024) { data, _ in
+            if let imageData = data {
+                completion(data)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
     func removeUser() {
+        removeUserSession()
         currentUser = nil
         following = []
     }

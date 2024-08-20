@@ -28,6 +28,7 @@ class LoginPageViewModel: ObservableObject {
                     switch result {
                     case .success(let user):
                         UserManager.shared.setupUser(with: user)
+                        UserManager.shared.saveUserSession(currentUser: user)
                         UserManager.shared.saveUserCredentials(login: self?.login, password: self?.password)
                         success(true)
                     case .failure(let error):

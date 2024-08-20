@@ -9,12 +9,20 @@ import SwiftUI
 
 struct CommentView: View {
     var comment: Comment
+    var author: User
     
     var body: some View {
         HStack(alignment: .top) {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 40, height: 40)
+            if let imageData = author.photoData, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+            } else {
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+            }
             VStack(alignment: .leading) {
                 commentDetailsView
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,6 +56,6 @@ struct CommentView: View {
     }
 }
 
-#Preview {
-    CommentView(comment: Comment(id: "1", contentText: "sample comment", date: Date().formatted(), author: User(id: "", email: "test@test.com", nickname: "testuser", photoUrl: "")))
-}
+//#Preview {
+//    CommentView(comment: Comment(id: "1", contentText: "sample comment", date: Date().formatted(), author: User(id: "", email: "test@test.com", nickname: "testuser", photoUrl: "")))
+//}

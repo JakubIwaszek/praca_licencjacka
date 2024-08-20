@@ -48,7 +48,8 @@ class AddNewPostViewModel: ObservableObject {
         guard let user = UserManager.shared.currentUser else {
             return nil
         }
-        let post = Post(id: UUID().uuidString, contentText: postText, date: Date().formatted(), user: user)
+        let sampleUser = User(id: user.id, email: user.email, nickname: user.nickname)
+        let post = Post(id: UUID().uuidString, contentText: postText, date: Date().formatted(), user: sampleUser)
         return post
     }
 }

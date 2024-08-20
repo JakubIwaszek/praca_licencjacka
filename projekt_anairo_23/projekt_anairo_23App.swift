@@ -39,6 +39,12 @@ struct projekt_anairo_23App: App {
                 }
             }
             .environmentObject(appRootManager)
+            .onAppear {
+                if let currentUser = UserManager.shared.getUserSession() {
+                    UserManager.shared.setupUser(with: currentUser)
+                    appRootManager.currentRoot = .home
+                }
+            }
         }
         .modelContainer(sharedModelContainer)
     }

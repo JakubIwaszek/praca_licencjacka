@@ -64,6 +64,7 @@ struct LoginPageView: View {
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding(.bottom, 6)
+            .accessibilityIdentifier("txtFieldLogin")
             SecureField(text: $viewModel.password) {
                 Text("Password")
                     .foregroundStyle(Color.gray)
@@ -73,6 +74,7 @@ struct LoginPageView: View {
             .foregroundStyle(Color.black)
             .background(Color.white)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .accessibilityIdentifier("txtFieldPassword")
         }
     }
     
@@ -93,6 +95,7 @@ struct LoginPageView: View {
             .background(Color.mainBackgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .disabled(!viewModel.validateFields())
+            .accessibilityIdentifier("btnLogin")
             NavigationLink {
                 RegisterPageView()
             } label: {
@@ -103,6 +106,7 @@ struct LoginPageView: View {
             .frame(width: 200)
             .background(Color.mainBackgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: 10))
+            .accessibilityIdentifier("btnSignUp")
         }
     }
 }

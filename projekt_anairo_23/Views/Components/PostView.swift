@@ -9,10 +9,12 @@ import SwiftUI
 
 struct PostView: View {
     var post: Post
+    @State var author: User
+    @State var isAuthorPhotoLoading = true
     
     var body: some View {
         NavigationLink {
-            PostDetailsView(post: post)
+            PostDetailsView(post: post, author: author)
         } label: {
             VStack(alignment: .leading) {
                 userView
@@ -32,10 +34,27 @@ struct PostView: View {
     
     private var userView: some View {
         HStack(alignment: .top) {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 40, height: 40)
-            Text(post.user.nickname)
+            if let imageData = author.photoData, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+            } else if isAuthorPhotoLoading {
+                ProgressView()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                    .onAppear {
+                        UserManager.shared.fetchUserImage(for: author) { imageData in
+                            author.photoData = imageData
+                            isAuthorPhotoLoading = false
+                        }
+                    }
+            } else {
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+            }
+            Text(author.nickname)
                 .multilineTextAlignment(.leading)
         }
     }
@@ -45,8 +64,8 @@ struct PostView: View {
             Text(post.contentText)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            if let imageUrl = post.imageUrl {
-                Image("fala")
+            if let imageData = post.imageData, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
                     .resizable()
                     .frame(maxWidth: .infinity)
                     .aspectRatio(contentMode: .fit)

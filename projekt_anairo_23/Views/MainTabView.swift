@@ -38,6 +38,7 @@ struct MainTabView: View {
                 }
         }
         .toolbarBackground(Color.mainBackgroundColor, for: .automatic)
+//        .tint(Color.lightGray)
     }
 }
 

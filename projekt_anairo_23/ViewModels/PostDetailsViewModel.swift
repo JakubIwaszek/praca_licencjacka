@@ -14,9 +14,11 @@ class PostDetailsViewModel: ObservableObject {
     @Published var isLoading = false
     var hasFetched = false
     var post: Post
+    var author: User
     
-    init(post: Post) {
+    init(post: Post, author: User) {
         self.post = post
+        self.author = author
     }
     
     func refreshData() {
@@ -46,7 +48,8 @@ class PostDetailsViewModel: ObservableObject {
             // handle error
             return
         }
-        let comment = Comment(id: UUID().uuidString, contentText: commentText, date: Date().formatted(), author: currentUser)
+        let sampleUser = User(id: currentUser.id, email: currentUser.email, nickname: currentUser.nickname)
+        let comment = Comment(id: UUID().uuidString, contentText: commentText, date: Date().formatted(), author: sampleUser)
         isLoading = true
         do {
             try AppDelegate.db.collection(CollectionPath.postsImpressions.rawValue).document(post.id).collection(CollectionPath.Subcollections.comments.rawValue).addDocument(from: comment)
