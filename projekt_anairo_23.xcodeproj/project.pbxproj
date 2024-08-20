@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A16EA1A2C6B617400F7B3F3 /* UserAccountPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16EA182C6B617400F7B3F3 /* UserAccountPageViewModelTests.swift */; };
+		8A16EA222C75061C00F7B3F3 /* projekt_anairo_23UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16EA212C75061C00F7B3F3 /* projekt_anairo_23UITests.swift */; };
+		8A16EA242C75061C00F7B3F3 /* projekt_anairo_23UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16EA232C75061C00F7B3F3 /* projekt_anairo_23UITestsLaunchTests.swift */; };
 		8A1C47632B5AF406003B754E /* AddNewPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C47622B5AF406003B754E /* AddNewPostViewModel.swift */; };
 		8A1C47652B5AFC0B003B754E /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C47642B5AFC0B003B754E /* UserManager.swift */; };
 		8A1C47672B5B1549003B754E /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C47662B5B1549003B754E /* HomePageViewModel.swift */; };
@@ -20,6 +23,8 @@
 		8A6E615B2BD3A3B70095223B /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 8A6E615A2BD3A3B70095223B /* KeychainAccess */; };
 		8A6E61602BD3C1F40095223B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6E615F2BD3C1F40095223B /* ImageView.swift */; };
 		8A949BDF2B129464005DCFD4 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A949BDE2B129464005DCFD4 /* LoginPageView.swift */; };
+		8A94E23A2C6B49BC00B363F0 /* projekt_anairo_23Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94E2392C6B49BC00B363F0 /* projekt_anairo_23Tests.swift */; };
+		8A94E2432C6B4E8900B363F0 /* UserManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A94E2412C6B4E8900B363F0 /* UserManagerTests.swift */; };
 		8AD988992AF570190092C290 /* projekt_anairo_23App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD988982AF570190092C290 /* projekt_anairo_23App.swift */; };
 		8AD9889B2AF570190092C290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9889A2AF570190092C290 /* ContentView.swift */; };
 		8AD9889D2AF570190092C290 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD9889C2AF570190092C290 /* Item.swift */; };
@@ -73,7 +78,28 @@
 		8AF863992B5C090500B46F08 /* DiscoverFriendsPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF863982B5C090500B46F08 /* DiscoverFriendsPageViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8A16EA252C75061C00F7B3F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD9888D2AF570190092C290 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AD988942AF570190092C290;
+			remoteInfo = projekt_anairo_23;
+		};
+		8A94E23B2C6B49BC00B363F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD9888D2AF570190092C290 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AD988942AF570190092C290;
+			remoteInfo = projekt_anairo_23;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8A16EA182C6B617400F7B3F3 /* UserAccountPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountPageViewModelTests.swift; sourceTree = "<group>"; };
+		8A16EA1F2C75061C00F7B3F3 /* projekt_anairo_23UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projekt_anairo_23UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A16EA212C75061C00F7B3F3 /* projekt_anairo_23UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projekt_anairo_23UITests.swift; sourceTree = "<group>"; };
+		8A16EA232C75061C00F7B3F3 /* projekt_anairo_23UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projekt_anairo_23UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8A1C47622B5AF406003B754E /* AddNewPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPostViewModel.swift; sourceTree = "<group>"; };
 		8A1C47642B5AFC0B003B754E /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		8A1C47662B5B1549003B754E /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
@@ -86,6 +112,9 @@
 		8A6E61572BD3A1720095223B /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		8A6E615F2BD3C1F40095223B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		8A949BDE2B129464005DCFD4 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
+		8A94E2372C6B49BC00B363F0 /* projekt_anairo_23Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projekt_anairo_23Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A94E2392C6B49BC00B363F0 /* projekt_anairo_23Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projekt_anairo_23Tests.swift; sourceTree = "<group>"; };
+		8A94E2412C6B4E8900B363F0 /* UserManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerTests.swift; sourceTree = "<group>"; };
 		8AD988952AF570190092C290 /* projekt_anairo_23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projekt_anairo_23.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD988982AF570190092C290 /* projekt_anairo_23App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projekt_anairo_23App.swift; sourceTree = "<group>"; };
 		8AD9889A2AF570190092C290 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +144,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8A16EA1C2C75061C00F7B3F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A94E2342C6B49BC00B363F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AD988922AF570190092C290 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -153,6 +196,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A16EA202C75061C00F7B3F3 /* projekt_anairo_23UITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A16EA212C75061C00F7B3F3 /* projekt_anairo_23UITests.swift */,
+				8A16EA232C75061C00F7B3F3 /* projekt_anairo_23UITestsLaunchTests.swift */,
+			);
+			path = projekt_anairo_23UITests;
+			sourceTree = "<group>";
+		};
 		8A1C476A2B5B1B7D003B754E /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,10 +222,22 @@
 			path = "Supporting Views";
 			sourceTree = "<group>";
 		};
+		8A94E2382C6B49BC00B363F0 /* projekt_anairo_23Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8A94E2392C6B49BC00B363F0 /* projekt_anairo_23Tests.swift */,
+				8A94E2412C6B4E8900B363F0 /* UserManagerTests.swift */,
+				8A16EA182C6B617400F7B3F3 /* UserAccountPageViewModelTests.swift */,
+			);
+			path = projekt_anairo_23Tests;
+			sourceTree = "<group>";
+		};
 		8AD9888C2AF570190092C290 = {
 			isa = PBXGroup;
 			children = (
 				8AD988972AF570190092C290 /* projekt_anairo_23 */,
+				8A94E2382C6B49BC00B363F0 /* projekt_anairo_23Tests */,
+				8A16EA202C75061C00F7B3F3 /* projekt_anairo_23UITests */,
 				8AD988962AF570190092C290 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				8AD988952AF570190092C290 /* projekt_anairo_23.app */,
+				8A94E2372C6B49BC00B363F0 /* projekt_anairo_23Tests.xctest */,
+				8A16EA1F2C75061C00F7B3F3 /* projekt_anairo_23UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -280,6 +346,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8A16EA1E2C75061C00F7B3F3 /* projekt_anairo_23UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A16EA272C75061C00F7B3F3 /* Build configuration list for PBXNativeTarget "projekt_anairo_23UITests" */;
+			buildPhases = (
+				8A16EA1B2C75061C00F7B3F3 /* Sources */,
+				8A16EA1C2C75061C00F7B3F3 /* Frameworks */,
+				8A16EA1D2C75061C00F7B3F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A16EA262C75061C00F7B3F3 /* PBXTargetDependency */,
+			);
+			name = projekt_anairo_23UITests;
+			productName = projekt_anairo_23UITests;
+			productReference = 8A16EA1F2C75061C00F7B3F3 /* projekt_anairo_23UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8A94E2362C6B49BC00B363F0 /* projekt_anairo_23Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A94E23F2C6B49BC00B363F0 /* Build configuration list for PBXNativeTarget "projekt_anairo_23Tests" */;
+			buildPhases = (
+				8A94E2332C6B49BC00B363F0 /* Sources */,
+				8A94E2342C6B49BC00B363F0 /* Frameworks */,
+				8A94E2352C6B49BC00B363F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A94E23C2C6B49BC00B363F0 /* PBXTargetDependency */,
+			);
+			name = projekt_anairo_23Tests;
+			productName = projekt_anairo_23Tests;
+			productReference = 8A94E2372C6B49BC00B363F0 /* projekt_anairo_23Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8AD988942AF570190092C290 /* projekt_anairo_23 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AD988A62AF5701B0092C290 /* Build configuration list for PBXNativeTarget "projekt_anairo_23" */;
@@ -337,6 +439,14 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					8A16EA1E2C75061C00F7B3F3 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 8AD988942AF570190092C290;
+					};
+					8A94E2362C6B49BC00B363F0 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 8AD988942AF570190092C290;
+					};
 					8AD988942AF570190092C290 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -360,11 +470,27 @@
 			projectRoot = "";
 			targets = (
 				8AD988942AF570190092C290 /* projekt_anairo_23 */,
+				8A94E2362C6B49BC00B363F0 /* projekt_anairo_23Tests */,
+				8A16EA1E2C75061C00F7B3F3 /* projekt_anairo_23UITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8A16EA1D2C75061C00F7B3F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A94E2352C6B49BC00B363F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AD988932AF570190092C290 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -378,6 +504,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8A16EA1B2C75061C00F7B3F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A16EA222C75061C00F7B3F3 /* projekt_anairo_23UITests.swift in Sources */,
+				8A16EA242C75061C00F7B3F3 /* projekt_anairo_23UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A94E2332C6B49BC00B363F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A94E2432C6B4E8900B363F0 /* UserManagerTests.swift in Sources */,
+				8A94E23A2C6B49BC00B363F0 /* projekt_anairo_23Tests.swift in Sources */,
+				8A16EA1A2C6B617400F7B3F3 /* UserAccountPageViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8AD988912AF570190092C290 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,7 +565,98 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8A16EA262C75061C00F7B3F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AD988942AF570190092C290 /* projekt_anairo_23 */;
+			targetProxy = 8A16EA252C75061C00F7B3F3 /* PBXContainerItemProxy */;
+		};
+		8A94E23C2C6B49BC00B363F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AD988942AF570190092C290 /* projekt_anairo_23 */;
+			targetProxy = 8A94E23B2C6B49BC00B363F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8A16EA282C75061C00F7B3F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FN745B5UPH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uek.projekt-anairo-23UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = projekt_anairo_23;
+			};
+			name = Debug;
+		};
+		8A16EA292C75061C00F7B3F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FN745B5UPH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uek.projekt-anairo-23UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = projekt_anairo_23;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A94E23D2C6B49BC00B363F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FN745B5UPH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uek.projekt-anairo-23Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/projekt_anairo_23.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/projekt_anairo_23";
+			};
+			name = Debug;
+		};
+		8A94E23E2C6B49BC00B363F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FN745B5UPH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uek.projekt-anairo-23Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/projekt_anairo_23.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/projekt_anairo_23";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8AD988A42AF5701B0092C290 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -458,6 +694,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -473,6 +710,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -519,6 +757,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -528,6 +767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -547,6 +787,7 @@
 				DEVELOPMENT_TEAM = FN745B5UPH;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to use FaceID for Auto Login.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -567,7 +808,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uek.projekt-anairo-23";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -586,6 +828,7 @@
 				DEVELOPMENT_TEAM = FN745B5UPH;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to use FaceID for Auto Login.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -606,7 +849,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uek.projekt-anairo-23";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,6 +860,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8A16EA272C75061C00F7B3F3 /* Build configuration list for PBXNativeTarget "projekt_anairo_23UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A16EA282C75061C00F7B3F3 /* Debug */,
+				8A16EA292C75061C00F7B3F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A94E23F2C6B49BC00B363F0 /* Build configuration list for PBXNativeTarget "projekt_anairo_23Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A94E23D2C6B49BC00B363F0 /* Debug */,
+				8A94E23E2C6B49BC00B363F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8AD988902AF570190092C290 /* Build configuration list for PBXProject "projekt_anairo_23" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

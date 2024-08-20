@@ -13,4 +13,19 @@ struct Post: Identifiable, Codable {
     var date: String
     var user: User
     var imageData: Data?
+    
+    init(id: String, contentText: String, date: String, user: User, imageData: Data? = nil) {
+        self.id = id
+        self.contentText = contentText
+        self.date = date
+        self.user = user
+        self.imageData = imageData
+    }
+    
+    init(id: String, contentText: String, date: String, user: User) {
+        self.id = id
+        self.contentText = contentText
+        self.date = date
+        self.user = user
+    }
 }

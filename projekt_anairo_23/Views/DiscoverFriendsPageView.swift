@@ -60,7 +60,7 @@ struct DiscoverFriendsPageView: View {
     
     private func createUserLayoutView(for user: User) -> some View {
         HStack(alignment: .top, spacing: 16) {
-            userImageView
+            DiscoverFriendsPageUserView(user: user)
             VStack(alignment: .leading) {
                 Text(user.nickname)
                     .font(.title3)
@@ -85,14 +85,38 @@ struct DiscoverFriendsPageView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    private var userImageView: some View {
-        Image(systemName: "person.circle.fill")
-            .resizable()
-            .frame(width: 40, height: 40)
-            .clipShape(Circle())
-    }
 }
 
 #Preview {
     DiscoverFriendsPageView()
+}
+
+fileprivate struct DiscoverFriendsPageUserView: View {
+    @State var user: User
+    @State var isAuthorPhotoLoading = true
+    
+    var body: some View {
+        HStack(alignment: .top) {
+            if let imageData = user.photoData, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+            } else if isAuthorPhotoLoading {
+                ProgressView()
+                    .frame(width: 40, height: 40)
+                    .clipShape(Circle())
+                    .onAppear {
+                        UserManager.shared.fetchUserImage(for: user) { imageData in
+                            user.photoData = imageData
+                            isAuthorPhotoLoading = false
+                        }
+                    }
+            } else {
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+            }
+        }
+    }
 }
